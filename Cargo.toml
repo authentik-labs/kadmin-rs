@@ -42,7 +42,7 @@ thiserror = "2"
 [build-dependencies]
 bindgen = "0.72"
 pkg-config = "0.3"
-prettyplease = "0.2"
+prettyplease = "0.3"
 quote = "1.0"
 strum = { version = "0.28", features = ["derive"] }
 syn = { version = "2.0", features = ["full", "parsing"] }
