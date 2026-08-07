@@ -1,7 +1,8 @@
 from datetime import timedelta
-from .utils import KerberosTestCase, random_string
 
 import kadmin
+
+from .utils import KerberosTestCase, random_string
 
 
 class TestPrincipal(KerberosTestCase):
@@ -123,7 +124,7 @@ class TestPrincipal(KerberosTestCase):
         self.assertIsNotNone(princ)
         assert princ is not None
         princ.randkey(kadm)
-        with self.assertRaises(Exception):
+        with self.assertRaises(Exception):  # noqa: B017
             self.realm.kinit(self.realm.user_princ, "new_password")
         # Restore password
         princ.change_password(kadm, self.realm.password("user"))

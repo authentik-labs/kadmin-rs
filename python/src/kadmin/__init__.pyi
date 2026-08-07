@@ -1,5 +1,6 @@
 import datetime
 from typing import Self, final
+
 from typing_extensions import disjoint_base
 
 __version__: str
@@ -139,27 +140,27 @@ class Principal:
 class NewPrincipalKey:
     @final
     class Password(NewPrincipalKey):
-        __match_args__: tuple
+        __match_args__: tuple = ("_0",)
         def __new__(cls, _0: str): ...
 
     @final
     class NoKey(NewPrincipalKey):
-        __match_args__: tuple
+        __match_args__: tuple = ()
         def __init__(self): ...
 
     @final
     class RandKey(NewPrincipalKey):
-        __match_args__: tuple
+        __match_args__: tuple = ()
         def __init__(self): ...
 
     @final
     class ServerRandKey(NewPrincipalKey):
-        __match_args__: tuple
+        __match_args__: tuple = ()
         def __init__(self): ...
 
     @final
     class OldStyleRandKey(NewPrincipalKey):
-        __match_args__: tuple
+        __match_args__: tuple = ()
         def __init__(self): ...
 
 @final
@@ -238,9 +239,9 @@ class TlData:
 __all__ = [
     "DbArgs",
     "EncryptionType",
+    "KAdm5Variant",
     "KAdmin",
     "KAdminApiVersion",
-    "KAdm5Variant",
     "KeySalt",
     "KeySalts",
     "NewPrincipalKey",
