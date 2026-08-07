@@ -438,7 +438,7 @@ dependencies = [
  "rand",
  "serial_test",
  "strum",
- "syn 2.0.119",
+ "syn 3.0.3",
  "test-log",
  "thiserror",
 ]
