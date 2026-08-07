@@ -1,6 +1,6 @@
-from .utils import KerberosTestCase, random_string
-
 import kadmin
+
+from .utils import KerberosTestCase, random_string
 
 
 class TestPolicy(KerberosTestCase):

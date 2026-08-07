@@ -1,5 +1,6 @@
 import datetime
 from typing import Self, final
+
 from typing_extensions import disjoint_base
 
 __version__: str
@@ -238,9 +239,9 @@ class TlData:
 __all__ = [
     "DbArgs",
     "EncryptionType",
+    "KAdm5Variant",
     "KAdmin",
     "KAdminApiVersion",
-    "KAdm5Variant",
     "KeySalt",
     "KeySalts",
     "NewPrincipalKey",

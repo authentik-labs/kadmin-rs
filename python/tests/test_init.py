@@ -1,6 +1,6 @@
-from .utils import KerberosTestCase
-
 import kadmin
+
+from .utils import KerberosTestCase
 
 
 class TestInit(KerberosTestCase):
