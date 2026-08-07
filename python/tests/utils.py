@@ -1,9 +1,10 @@
 import os
-from copy import deepcopy
-from k5test import realm
-from unittest import TestCase
-from random import SystemRandom
 import string
+from copy import deepcopy
+from random import SystemRandom
+from unittest import TestCase
+
+from k5test import realm
 
 
 def random_string(length: int) -> str:

@@ -81,6 +81,7 @@ test-rust-heimdal:
   RUSTFLAGS="-Awarnings" uv run cargo nextest run --jobs 1 --no-default-features --features heimdal_client,heimdal_server,log --no-capture
 [private]
 ci-test-deps:
+  sudo apt-get update
   sudo apt-get install -y --no-install-recommends valgrind
 [private]
 ci-test-deps-mit: ci-test-deps
