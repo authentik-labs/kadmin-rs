@@ -600,7 +600,11 @@ policy_doer_struct!(
     /// #     .unwrap();
     /// let polname = String::from("mynewpol");
     /// let policy = kadmin.get_policy(&polname).unwrap().unwrap();
-    /// let policy = policy.modifier().password_min_length(16).modify(&kadmin).unwrap();
+    /// let policy = policy
+    ///     .modifier()
+    ///     .password_min_length(16)
+    ///     .modify(&kadmin)
+    ///     .unwrap();
     /// assert_eq!(policy.password_min_length(), 16);
     /// ```
     #[derive(Clone, Debug, Default)]
