@@ -40,7 +40,7 @@ strum = { version = "0.28", features = ["derive"] }
 thiserror = "2"
 
 [build-dependencies]
-bindgen = "0.72"
+bindgen = "0.73"
 pkg-config = "0.3"
 prettyplease = "0.3"
 quote = "1.0"
