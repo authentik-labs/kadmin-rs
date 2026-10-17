@@ -12,6 +12,10 @@ name: Python CI
     types:
       - released
 
+concurrency:
+  group: "${{ github.workflow }}-${{ github.ref }}"
+  cancel-in-progress: true
+
 env:
   DEBIAN_FRONTEND: noninteractive
   CARGO_INCREMENTAL: "false"
