@@ -66,7 +66,7 @@ jobs:
         with:
           tool: just
       - run: just ci-build-python
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: python-${{ matrix.python-version }}-build
           path: target/wheels/
@@ -131,7 +131,7 @@ jobs:
         with:
           tool: just
       - run: just ci-build-python-sdist
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: python-cibw-sdist
           path: dist
@@ -178,7 +178,7 @@ jobs:
           only: "${{ matrix.cibw-only }}"
         env:
           RUSTC_WRAPPER: ""
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: python-cibw-wheels-${{ matrix.cibw-only }}
           path: ./wheelhouse/*.whl
